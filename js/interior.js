@@ -1,3 +1,5 @@
+
+import { supabase } from '../supabase-config.js';
 /**
  * UrbanNest Interiors - Interactive Application Script
  * Features:
@@ -20,7 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
     initGalleryFiltersAndLightbox();
     initFaqAccordion();
     initContactForms();
+    initApprovedReviews();
 });
+
+function escapeHtml(value) {
+    return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
 
 /* ==========================================================================
    1. THEME SWITCHER (Dark/Light Mode & Brand Accent Colors)
@@ -561,9 +572,31 @@ function initWallStudio() {
         });
     });
 
-    // Save & Quote Buttons
+    // Save the current 3D wall setup into the wall_designs table
     if (saveDesignBtn) {
-        saveDesignBtn.addEventListener('click', () => {
+        saveDesignBtn.addEventListener('click', async () => {
+            saveDesignBtn.disabled = true;
+
+            const { error } = await supabase.from('wall_designs').insert({
+                wall_type: wallState.type,
+                color: wallState.color,
+                pattern: wallState.patternClass || null,
+                tile: wallState.tileClass || null,
+                lighting: wallState.lightingClass,
+                width_feet: wallState.width,
+                height_feet: wallState.height,
+                total_cost: wallState.currentTotalCost,
+                accents: wallState.accents
+            });
+
+            saveDesignBtn.disabled = false;
+
+            if (error) {
+                console.error('wall_designs insert failed:', error);
+                showToast('Could not save your wall design. Please try again.', 'error');
+                return;
+            }
+
             showToast('3D Wall Design saved to your session portfolio!', 'success');
         });
     }
@@ -683,7 +716,7 @@ function initCostEstimator() {
     }
 
     if (customerForm) {
-        customerForm.addEventListener('submit', (e) => {
+        customerForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const nameInput = document.getElementById('est-name');
             const phoneInput = document.getElementById('est-phone');
@@ -697,14 +730,55 @@ function initCostEstimator() {
             }
 
             const res = calculateTotal();
-            displayQuoteModal({
+            const quoteView = {
                 name: nameInput.value,
                 phone: phoneInput.value,
                 email: emailInput?.value || 'N/A',
                 city: cityInput?.value || 'Selected City',
                 possession: possessionInput?.value || 'Immediate',
                 ...res
+            };
+
+            const submitBtn = document.getElementById('calculate-cost-btn');
+            if (submitBtn) submitBtn.disabled = true;
+
+            const { data: customer, error: customerError } = await supabase
+                .from('customers')
+                .insert({
+                    name: nameInput.value.trim(),
+                    phone: phoneInput.value.trim(),
+                    email: emailInput?.value.trim() || null,
+                    city: cityInput?.value || null
+                })
+                .select('id')
+                .single();
+
+            if (customerError || !customer?.id) {
+                if (submitBtn) submitBtn.disabled = false;
+                console.error('customers insert failed:', customerError);
+                showToast('Could not save your details. Please try again.', 'error');
+                return;
+            }
+
+            const { error: quoteError } = await supabase.from('quotes').insert({
+                customer_id: customer.id,
+                bhk_type: selectedFlat,
+                package_tier: selectedTier,
+                selected_rooms: res.rooms.join(', '),
+                estimated_min: res.min,
+                estimated_max: res.max,
+                possession_status: possessionInput?.value || null
             });
+
+            if (submitBtn) submitBtn.disabled = false;
+
+            if (quoteError) {
+                console.error('quotes insert failed:', quoteError);
+                showToast('Your details were saved, but the quote could not be stored. Please try again.', 'error');
+                return;
+            }
+
+            displayQuoteModal(quoteView);
         });
     }
 
@@ -873,8 +947,36 @@ function initFaqAccordion() {
 function initContactForms() {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            const name = document.getElementById('contact-name')?.value.trim();
+            const email = document.getElementById('contact-email')?.value.trim();
+            const phone = document.getElementById('contact-phone')?.value.trim();
+            const flatType = document.getElementById('contact-flat-type')?.value || null;
+            const budget = document.getElementById('contact-budget')?.value || null;
+            const message = document.getElementById('contact-message')?.value.trim() || null;
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            if (submitBtn) submitBtn.disabled = true;
+
+            const { error } = await supabase.from('contact_messages').insert({
+                name,
+                email,
+                phone,
+                flat_type: flatType,
+                budget,
+                message
+            });
+
+            if (submitBtn) submitBtn.disabled = false;
+
+            if (error) {
+                console.error('contact_messages insert failed:', error);
+                showToast('Sorry, we could not send your message. Please try again.', 'error');
+                return;
+            }
+
             showToast('Thank you! Your inquiry has been dispatched to our design team.', 'success');
             contactForm.reset();
         });
@@ -895,6 +997,50 @@ function initContactForms() {
             }
         });
     });
+}
+
+/* ==========================================================================
+   9. APPROVED REVIEWS FROM SUPABASE
+   Only reviews with approved = true are shown. Unapproved rows stay hidden.
+   Existing static testimonials remain if none are approved yet.
+   ========================================================================== */
+async function initApprovedReviews() {
+    const grid = document.querySelector('#reviews .testimonials-grid');
+    if (!grid) return;
+
+    const { data, error } = await supabase
+        .from('reviews')
+        .select('customer_name, review_text, rating')
+        .eq('approved', true)
+        .order('created_at', { ascending: false });
+
+    if (error) {
+        console.error('reviews fetch failed:', error);
+        return;
+    }
+
+    if (!data || data.length === 0) return;
+
+    grid.innerHTML = data.map((review) => {
+        const rating = Math.max(0, Math.min(5, Number(review.rating) || 0));
+        const stars = Array.from({ length: 5 }, (_, index) => {
+            return index < rating
+                ? '<i class="fa-solid fa-star"></i>'
+                : '<i class="fa-regular fa-star"></i>';
+        }).join('');
+
+        return `
+            <div class="testimonial-card">
+                <div class="review-stars">${stars}</div>
+                <p class="review-quote">${escapeHtml(review.review_text || '')}</p>
+                <div class="reviewer-meta">
+                    <div>
+                        <h4 class="reviewer-name">${escapeHtml(review.customer_name || 'UrbanNest Client')}</h4>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
 }
 
 function showToast(message, type = 'info') {
@@ -928,3 +1074,5 @@ function showToast(message, type = 'info') {
         setTimeout(() => toast.remove(), 300);
     }, 3800);
 }
+
+
