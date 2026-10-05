@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanNest Interiors | Premium Home Interiors & 3D Wall Studio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/interior.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Mobile Top Navigation Bar -->
+    <header class="mobile-nav-bar">
+        <span class="section-title text-18" style="color: white; margin: 0;">UrbanNest</span>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <div class="row">
+        <!-- ==========================================================================
+             SIDEBAR NAVIGATION
+             ========================================================================== -->
+        <div class="col-2">
+            <nav class="sidebar" id="main-sidebar">
+                <div>
+                    <div class="sidebar-header">
+                        <span class="brand-badge">Premium Studio</span>
+                        <p class="section-title">UrbanNest</p>
+                        <p style="font-size: 0.8rem; opacity: 0.85; margin-top: 4px;">Interior Design & Architecture</p>
+                    </div>
+
+                    <ul class="sidebar-nav-list">
+                        <li><a class="sidebar-link active" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a class="sidebar-link" href="#showcase"><i class="fa-solid fa-images"></i> Showcase</a></li>
+                        <li><a class="sidebar-link" href="#render-switch"><i class="fa-solid fa-sliders"></i> 3D Render Switcher</a></li>
+                        <li><a class="sidebar-link" href="#wall-studio"><i class="fa-solid fa-cubes"></i> 3D Wall Studio</a></li>
+                        <li><a class="sidebar-link" href="#services"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+                        <li><a class="sidebar-link" href="#cost-estimator"><i class="fa-solid fa-calculator"></i> Cost Estimator</a></li>
+                        <li><a class="sidebar-link" href="#designers"><i class="fa-solid fa-users"></i> Designers</a></li>
+                        <li><a class="sidebar-link" href="#packages"><i class="fa-solid fa-tags"></i> Packages</a></li>
+                        <li><a class="sidebar-link" href="#reviews"><i class="fa-solid fa-star"></i> Reviews</a></li>
+                        <li><a class="sidebar-link" href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Theme Customizer Panel in Sidebar -->
+                <div class="sidebar-tools-panel">
+                    <button class="theme-toggle-btn" id="theme-toggle-btn" type="button">
+                        <i class="fa-solid fa-moon" id="theme-icon"></i>
+                        <span id="theme-text">Dark Mode</span>
+                    </button>
+                    
+                    <div class="accent-palette-picker">
+                        <span class="accent-label">Theme Color</span>
+                        <div class="accent-swatches">
+                            <span class="accent-swatch active" style="background-color: #f44336;" data-color="#f44336" title="Scarlet Red (Default)"></span>
+                            <span class="accent-swatch" style="background-color: #4f46e5;" data-color="#4f46e5" title="Royal Indigo"></span>
+                            <span class="accent-swatch" style="background-color: #10b981;" data-color="#10b981" title="Emerald Luxe"></span>
+                            <span class="accent-swatch" style="background-color: #f59e0b;" data-color="#f59e0b" title="Warm Amber"></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- ==========================================================================
+             MAIN CONTENT COLUMN
+             ========================================================================== -->
+        <div class="col-10">
+
+            <!-- 1. HOME / HERO SECTION -->
+            <section id="home" class="hero-container">
+                <div class="hero-pill-tag">
+                    <i class="fa-solid fa-sparkles"></i>
+                    <span>Award-Winning Modular Home Interiors</span>
+                </div>
+                <h1 class="hero-headline">
+                    Crafting Spaces That Reflect <span class="highlight">Your Soul</span> &amp; Unlock <span class="highlight">20% More Space</span>.
+                </h1>
+                <p class="hero-subtitle">
+                    Welcome to UrbanNest Interiors. From smart 1 BHK apartments to opulent villas, we blend architectural precision, space-saving modular engineering, and real-time 3D customization. Get a guaranteed 45-day move-in with a 10-year comprehensive warranty.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#cost-estimator" class="btn-hero btn-hero-primary">
+                        <i class="fa-solid fa-calculator"></i> Calculate Flat Cost (1/2/3 BHK)
+                    </a>
+                    <a href="#wall-studio" class="btn-hero btn-hero-outline">
+                        <i class="fa-solid fa-cubes"></i> Try 3D Wall Studio
+                    </a>
+                    <a href="#render-switch" class="btn-hero btn-hero-outline">
+                        <i class="fa-solid fa-sliders"></i> B&amp;W to Color Switcher
+                    </a>
+                </div>
+
+                <!-- DesignCafe Style Trust Metrics Bar -->
+                <div class="trust-metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-icon"><i class="fa-solid fa-house-chimney-check"></i></div>
+                        <div>
+                            <div class="metric-number">5,000+</div>
+                            <div class="metric-label">Homes Handed Over</div>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div>
+                            <div class="metric-number">45 Days</div>
+                            <div class="metric-label">Move-In Guarantee</div>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div>
+                            <div class="metric-number">10 Years</div>
+                            <div class="metric-label">Comprehensive Warranty</div>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-icon"><i class="fa-solid fa-maximize"></i></div>
+                        <div>
+                            <div class="metric-number">20% More</div>
+                            <div class="metric-label">SpaceCraft™ Storage</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DesignCafe Advantage 4-Column Feature Row -->
+                <div class="dc-features-grid">
+                    <div class="dc-card">
+                        <i class="fa-solid fa-arrows-split-up-and-left dc-card-icon"></i>
+                        <h3 class="dc-card-title">Space-Saving Furniture</h3>
+                        <p class="dc-card-desc">Innovations like Murphy beds, foldaway study tables, and kitchen pantries that maximize every inch of your urban home.</p>
+                    </div>
+                    <div class="dc-card">
+                        <i class="fa-solid fa-receipt dc-card-icon"></i>
+                        <h3 class="dc-card-title">Zero Hidden Costs</h3>
+                        <p class="dc-card-desc">Complete itemized transparent pricing with zero surprise extras. What you see on your quotation is exactly what you pay.</p>
+                    </div>
+                    <div class="dc-card">
+                        <i class="fa-solid fa-vr-cardboard dc-card-icon"></i>
+                        <h3 class="dc-card-title">51,000+ Design Choices</h3>
+                        <p class="dc-card-desc">Personalize modular finishes, textures, materials, and colors with our live 3D visualizers and VR studio consultations.</p>
+                    </div>
+                    <div class="dc-card">
+                        <i class="fa-solid fa-industry dc-card-icon"></i>
+                        <h3 class="dc-card-title">In-House German Tech</h3>
+                        <p class="dc-card-desc">Precision cutting and edge-banding in our automated factories ensure flawless craftsmanship and anti-bubble finish.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. SHOWCASE GALLERY SECTION -->
+            <section id="showcase">
+                <p class="section-big text-dark">Interior Design</p>
+                <p class="section-big text-primary">Showcase.</p>
+                <div class="pill-primary"></div>
+
+                <p class="p pb-30">
+                    Explore our curated portfolio of bespoke residential transformations. Filter by living spaces and click on any design for high-resolution specifications and material details.
+                </p>
+
+                <!-- Filter Controls -->
+                <div class="gallery-filters-bar">
+                    <button class="gallery-filter-btn active" data-filter="all">All Spaces</button>
+                    <button class="gallery-filter-btn" data-filter="living">Living Rooms</button>
+                    <button class="gallery-filter-btn" data-filter="kitchen">Modular Kitchens</button>
+                    <button class="gallery-filter-btn" data-filter="bedroom">Master Bedrooms</button>
+                    <button class="gallery-filter-btn" data-filter="dining">Dining &amp; Atrium</button>
+                </div>
+
+                <!-- Showcase Grid -->
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="kitchen">
+                        <div class="gallery-img-wrap">
+                            <span class="gallery-tag-pill"><i class="fa-solid fa-utensils"></i> Modular Kitchen</span>
+                            <img src="./images/kitchenconcrete (1).jpg" alt="Modular Concrete Island Kitchen">
+                        </div>
+                        <div class="gallery-info-block">
+                            <h4 class="gallery-overlay-title">Minimalist Concrete Island Kitchen</h4>
+                            <p class="gallery-overlay-desc">Quartz countertop, soft-close Blum lift-ups, and integrated warm profile cove lighting.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="dining">
+                        <div class="gallery-img-wrap">
+                            <span class="gallery-tag-pill"><i class="fa-solid fa-archway"></i> Double-Height Atrium</span>
+                            <img src="./images/atrium.jpg" alt="Luxury Atrium Foyer">
+                        </div>
+                        <div class="gallery-info-block">
+                            <h4 class="gallery-overlay-title">Double-Height Architectural Foyer</h4>
+                            <p class="gallery-overlay-desc">Natural sunlight skylights, Italian marble cladding, and sculptural statement chandelier.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="living">
+                        <div class="gallery-img-wrap">
+                            <span class="gallery-tag-pill"><i class="fa-solid fa-couch"></i> Living Space</span>
+                            <img src="./images/livingroom (1).jpg" alt="Nordic Living Room">
+                        </div>
+                        <div class="gallery-info-block">
+                            <h4 class="gallery-overlay-title">Nordic Serenity Living Suite</h4>
+                            <p class="gallery-overlay-desc">Fluted oak timber paneling, concealed acoustic soundproofing, and custom linen seating.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="bedroom">
+                        <div class="gallery-img-wrap">
+                            <span class="gallery-tag-pill"><i class="fa-solid fa-bed"></i> Master Bedroom</span>
+                            <img src="./images/bedroom.jpg" alt="Contemporary Master Bedroom">
+                        </div>
+                        <div class="gallery-info-block">
+                            <h4 class="gallery-overlay-title">Contemporary Master Suite</h4>
+                            <p class="gallery-overlay-desc">Floor-to-ceiling tinted glass sliding wardrobes, cushioned upholstered headboard, and study nook.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="dining">
+                        <div class="gallery-img-wrap">
+                            <span class="gallery-tag-pill"><i class="fa-solid fa-wine-glass"></i> Dining Room</span>
+                            <img src="./images/diningroom.jpg" alt="Walnut Dining Suite">
+                        </div>
+                        <div class="gallery-info-block">
+                            <h4 class="gallery-overlay-title">Warm Walnut Dining &amp; Bar</h4>
+                            <p class="gallery-overlay-desc">Solid wood 6-seater dining table, pendant illumination, and integrated wine display unit.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="living">
+                        <div class="gallery-img-wrap">
+                            <span class="gallery-tag-pill"><i class="fa-solid fa-tv"></i> Entertainment Wall</span>
+                            <img src="./images/livingroom2.jpg" alt="Modern TV Lounge">
+                        </div>
+                        <div class="gallery-info-block">
+                            <h4 class="gallery-overlay-title">Minimalist Media Lounge</h4>
+                            <p class="gallery-overlay-desc">Backlit floating television console, brass accents, and hidden cable management channels.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. RENDER.AI COMPARISON SLIDER FEATURE (Black & White to Color Switch) -->
+            <section id="render-switch">
+                <div class="render-ai-wrapper">
+                    <div class="render-ai-header">
+                        <div>
+                            <span class="brand-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Render.ai Visualizer</span>
+                            <h2 class="section-big text-dark" style="font-size: 2.4rem;">One model. Many possibilities.</h2>
+                            <p class="p" style="margin-top: 6px;">Choose a space, then explore how materials, textures, and light transform its character.</p>
+                        </div>
+                        <div class="render-view-presets">
+                            <button class="render-preset-btn" data-render-view="bw">B&amp;W Clay</button>
+                            <button class="render-preset-btn active" data-render-view="split">50/50 Split</button>
+                            <button class="render-preset-btn" data-render-view="color">Full Color</button>
+                            <button class="render-preset-btn" id="render-sweep-btn"><i class="fa-solid fa-play"></i> Auto-Sweep</button>
+                        </div>
+                    </div>
+
+                    <div class="render-main-layout">
+                        <!-- Left Room Selection Cards -->
+                        <div class="render-room-selector">
+                            <div class="render-room-item active" data-space="townhouse">
+                                <img src="./images/livingroom (1).jpg" alt="Townhouse Living" class="render-room-thumb">
+                                <div class="render-room-title">Townhouse Living</div>
+                            </div>
+                            <div class="render-room-item" data-space="kitchen">
+                                <img src="./images/kitchenconcrete (1).jpg" alt="Island Kitchen" class="render-room-thumb">
+                                <div class="render-room-title">Modular Kitchen</div>
+                            </div>
+                            <div class="render-room-item" data-space="bedroom">
+                                <img src="./images/bedroom.jpg" alt="Master Bedroom" class="render-room-thumb">
+                                <div class="render-room-title">Master Bedroom</div>
+                            </div>
+                            <div class="render-room-item" data-space="atrium">
+                                <img src="./images/atrium.jpg" alt="Atrium" class="render-room-thumb">
+                                <div class="render-room-title">Atrium &amp; Foyer</div>
+                            </div>
+                            <div class="render-room-item" data-space="dining">
+                                <img src="./images/diningroom.jpg" alt="Contemporary Dining" class="render-room-thumb">
+                                <div class="render-room-title">Dining Suite</div>
+                            </div>
+                        </div>
+
+                        <!-- Center Viewport with Interactive Split Handle -->
+                        <div class="render-viewport-container">
+                            <div class="render-stage-topbar">
+                                <div>
+                                    <span class="render-breadcrumb" id="render-space-breadcrumb">Townhouse</span>
+                                    <span> / </span>
+                                    <span id="render-finish-breadcrumb" class="text-primary" style="font-weight: 600;">Limestone</span>
+                                </div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted);">
+                                    <i class="fa-solid fa-arrows-left-right mr-5"></i> Drag handle to inspect render fidelity
+                                </div>
+                            </div>
+
+                            <div class="render-slider-box" id="render-slider-container">
+                                <!-- Base Grayscale Layer -->
+                                <div class="render-image-layer render-bw-layer">
+                                    <img src="./images/livingroom (1).jpg" alt="Black and White Architectural Clay Render" id="render-bw-img">
+                                    <span class="render-badge-bw"><i class="fa-solid fa-cube"></i> Original / B&amp;W Clay</span>
+                                </div>
+
+                                <!-- Overlay Full Color Layer (Clipped Dynamically) -->
+                                <div class="render-image-layer render-color-layer" id="render-color-layer">
+                                    <img src="./images/livingroom (1).jpg" alt="Photorealistic Color Material Render" id="render-color-img">
+                                    <span class="render-badge-color"><i class="fa-solid fa-palette"></i> Finished Materials &amp; Light</span>
+                                </div>
+
+                                <!-- Draggable Splitter Handle -->
+                                <div class="render-slider-handle" id="render-slider-handle">
+                                    <div class="render-handle-knob">
+                                        <i class="fa-solid fa-arrows-left-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Finish Selector Bar -->
+                            <div class="render-finishes-bar">
+                                <span class="finish-label">Explore a finish:</span>
+                                <div class="finish-chips-list">
+                                    <button class="finish-chip active" data-finish="limestone">
+                                        <span class="finish-chip-dot" style="background-color: #d7ccc8;"></span> Limestone
+                                    </button>
+                                    <button class="finish-chip" data-finish="oak">
+                                        <span class="finish-chip-dot" style="background-color: #bcaaa4;"></span> Scandinavian Oak
+                                    </button>
+                                    <button class="finish-chip" data-finish="marble">
+                                        <span class="finish-chip-dot" style="background-color: #eceff1;"></span> Carrara Marble
+                                    </button>
+                                    <button class="finish-chip" data-finish="charcoal">
+                                        <span class="finish-chip-dot" style="background-color: #37474f;"></span> Nordic Charcoal
+                                    </button>
+                                    <button class="finish-chip" data-finish="terracotta">
+                                        <span class="finish-chip-dot" style="background-color: #e64a19;"></span> Modern Terracotta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. INTERACTIVE 3D WALL STUDIO SECTION -->
+            <section id="wall-studio">
+                <p class="section-big text-dark">Real-Time Studio</p>
+                <p class="section-big text-primary">3D Wall System.</p>
+                <div class="pill-primary"></div>
+                <p class="p pb-30">
+                    Design your feature wall live in 3D. Experiment with designer paint shades, vertical timber slats, acoustic fluting, luxury Italian marble, Moroccan tiles, and lighting atmospheres with real-time square-footage cost estimation.
+                </p>
+
+                <div class="wall-studio-wrapper">
+                    <div class="wall-studio-layout">
+                        <!-- 3D Viewport Visualizer -->
+                        <div class="wall-visualizer-stage" id="wall-visualizer-box">
+                            <div class="wall-3d-perspective-container angle-perspective" id="wall-3d-perspective-container">
+                                <!-- The Interactive Wall -->
+                                <div class="wall-surface" id="wall-stage-surface">
+                                    <!-- Architectural Mouldings -->
+                                    <div class="wall-crown-moulding" id="wall-element-baseboard"></div>
+                                    <div class="wall-baseboard"></div>
+
+                                    <!-- Accents: Art, Shelves, Sconces -->
+                                    <div class="wall-accent-art" id="wall-element-art">
+                                        <div class="art-canvas"><i class="fa-solid fa-shapes"></i></div>
+                                    </div>
+
+                                    <div class="wall-accent-shelf" id="wall-element-shelves">
+                                        <div class="shelf-decor">
+                                            <div class="decor-book"></div>
+                                            <div class="decor-book-2"></div>
+                                            <i class="fa-solid fa-seedling decor-plant"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="wall-accent-sconce sconce-left" id="wall-element-sconces">
+                                        <div class="sconce-light-beam"></div>
+                                    </div>
+                                    <div class="wall-accent-sconce sconce-right">
+                                        <div class="sconce-light-beam"></div>
+                                    </div>
+
+                                    <!-- Lighting Atmosphere Filter Layer -->
+                                    <div class="wall-lighting-overlay"></div>
+                                </div>
+
+                                <!-- Hardwood Floor Perspective -->
+                                <div class="wall-floor"></div>
+
+                                <!-- Foreground Spatial Decor Furniture -->
+                                <i class="fa-solid fa-couch wall-furniture-chair"></i>
+                            </div>
+                        </div>
+
+                        <!-- Wall Controls Sidebar -->
+                        <div class="wall-controls-card">
+                            <!-- 3D Perspective Angle Toggle -->
+                            <div class="wall-ctrl-group">
+                                <h4><span>3D View Angle</span></h4>
+                                <div style="display: flex; gap: 8px;">
+                                    <button class="render-preset-btn active" data-wall-angle="perspective">Perspective</button>
+                                    <button class="render-preset-btn" data-wall-angle="front">Front Flat</button>
+                                    <button class="render-preset-btn" data-wall-angle="isometric">Isometric</button>
+                                </div>
+                            </div>
+
+                            <!-- Colors & Paints -->
+                            <div class="wall-ctrl-group">
+                                <h4><span>Wall Paint Palette</span></h4>
+                                <div class="wall-color-grid">
+                                    <span class="wall-color-swatch active" style="background-color: #f44336;" data-color="#f44336" title="Scarlet Red"></span>
+                                    <span class="wall-color-swatch" style="background-color: #f5f5f5;" data-color="#f5f5f5" title="Alabaster White"></span>
+                                    <span class="wall-color-swatch" style="background-color: #d7ccc8;" data-color="#d7ccc8" title="Cashmere Sand"></span>
+                                    <span class="wall-color-swatch" style="background-color: #81c784;" data-color="#81c784" title="Sage Olive"></span>
+                                    <span class="wall-color-swatch" style="background-color: #37474f;" data-color="#37474f" title="Slate Charcoal"></span>
+                                    <span class="wall-color-swatch" style="background-color: #3f51b5;" data-color="#3f51b5" title="Deep Indigo"></span>
+                                    <span class="wall-color-swatch" style="background-color: #e65100;" data-color="#e65100" title="Terracotta Earth"></span>
+                                    <span class="wall-color-swatch" style="background-color: #ffb300;" data-color="#ffb300" title="Warm Ochre"></span>
+                                    <span class="wall-color-swatch" style="background-color: #f06292;" data-color="#f06292" title="Blush Coral"></span>
+                                    <span class="wall-color-swatch" style="background-color: #00897b;" data-color="#00897b" title="Emerald Pine"></span>
+                                    <span class="wall-color-swatch" style="background-color: #212121;" data-color="#212121" title="Midnight Onyx"></span>
+                                    <span class="wall-color-swatch" style="background-color: #795548;" data-color="#795548" title="Warm Walnut"></span>
+                                </div>
+                                <div class="wall-custom-color-row">
+                                    <input type="color" id="wall-custom-color" value="#f44336" class="wall-color-input">
+                                    <span>Custom Color Picker</span>
+                                </div>
+                            </div>
+
+                            <!-- Wallpapers & Designs -->
+                            <div class="wall-ctrl-group">
+                                <h4><span>Wall Designs &amp; Textures</span></h4>
+                                <div class="wall-options-grid">
+                                    <div class="wall-option-pill wall-design-option" data-pattern="slats">
+                                        <i class="fa-solid fa-bars"></i>
+                                        <span>Fluted Wood Slats</span>
+                                    </div>
+                                    <div class="wall-option-pill wall-design-option" data-pattern="chevron">
+                                        <i class="fa-solid fa-network-wired"></i>
+                                        <span>Geometric Chevron</span>
+                                    </div>
+                                    <div class="wall-option-pill wall-design-option" data-pattern="stucco">
+                                        <i class="fa-solid fa-brush"></i>
+                                        <span>Venetian Stucco</span>
+                                    </div>
+                                    <div class="wall-option-pill wall-design-option" data-pattern="brick">
+                                        <i class="fa-solid fa-cubes-stacked"></i>
+                                        <span>Exposed Red Brick</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tiles & Stone Cladding -->
+                            <div class="wall-ctrl-group">
+                                <h4><span>Tiles &amp; Stone Cladding</span></h4>
+                                <div class="wall-options-grid">
+                                    <div class="wall-option-pill wall-tile-option" data-tile="carrara">
+                                        <i class="fa-solid fa-square"></i>
+                                        <span>Carrara Marble</span>
+                                    </div>
+                                    <div class="wall-option-pill wall-tile-option" data-tile="subway">
+                                        <i class="fa-solid fa-table-cells"></i>
+                                        <span>Subway Grid Tile</span>
+                                    </div>
+                                    <div class="wall-option-pill wall-tile-option" data-tile="hexagon">
+                                        <i class="fa-solid fa-braille"></i>
+                                        <span>Moroccan Mosaic</span>
+                                    </div>
+                                    <div class="wall-option-pill wall-tile-option" data-tile="slate">
+                                        <i class="fa-solid fa-gem"></i>
+                                        <span>Dark Slate Stone</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lighting Atmosphere Modes -->
+                            <div class="wall-ctrl-group">
+                                <h4><span>Lighting Atmosphere</span></h4>
+                                <div class="wall-lighting-grid">
+                                    <button class="wall-light-btn wall-lighting-option active" data-lighting="daylight"><i class="fa-solid fa-sun"></i><br>Daylight</button>
+                                    <button class="wall-light-btn wall-lighting-option" data-lighting="warm"><i class="fa-solid fa-fire"></i><br>Warm Cove</button>
+                                    <button class="wall-light-btn wall-lighting-option" data-lighting="spotlight"><i class="fa-solid fa-lightbulb"></i><br>Spotlight</button>
+                                    <button class="wall-light-btn wall-lighting-option" data-lighting="night"><i class="fa-solid fa-moon"></i><br>Night Mood</button>
+                                </div>
+                            </div>
+
+                            <!-- Architectural Accents -->
+                            <div class="wall-ctrl-group">
+                                <h4><span>Wall Elements &amp; Decor</span></h4>
+                                <div class="wall-accents-list">
+                                    <label class="wall-accent-check-item">
+                                        <span>Floating Timber Shelves</span>
+                                        <input type="checkbox" class="wall-accent-toggle" data-accent="shelves" checked>
+                                    </label>
+                                    <label class="wall-accent-check-item">
+                                        <span>Framed Modern Artwork</span>
+                                        <input type="checkbox" class="wall-accent-toggle" data-accent="art" checked>
+                                    </label>
+                                    <label class="wall-accent-check-item">
+                                        <span>Brass Sconce Lamps</span>
+                                        <input type="checkbox" class="wall-accent-toggle" data-accent="sconces" checked>
+                                    </label>
+                                    <label class="wall-accent-check-item">
+                                        <span>Baseboard &amp; Crown Moulding</span>
+                                        <input type="checkbox" class="wall-accent-toggle" data-accent="baseboard" checked>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Live Dimensions & Cost Calculation -->
+                            <div class="wall-ctrl-group">
+                                <h4><span>Wall Dimensions &amp; Cost</span></h4>
+                                <div class="wall-slider-row">
+                                    <div class="wall-slider-header">
+                                        <span>Wall Width</span>
+                                        <strong id="wall-width-val">12 ft</strong>
+                                    </div>
+                                    <input type="range" min="8" max="24" value="12" class="wall-range-slider" id="wall-width-slider">
+                                </div>
+
+                                <div class="wall-slider-row">
+                                    <div class="wall-slider-header">
+                                        <span>Wall Height</span>
+                                        <strong id="wall-height-val">10 ft</strong>
+                                    </div>
+                                    <input type="range" min="8" max="14" value="10" class="wall-range-slider" id="wall-height-slider">
+                                </div>
+
+                                <div class="wall-calc-result-box">
+                                    <div class="wall-calc-sub">Area: <span id="wall-area-val">120 sq.ft</span> (Materials + Installation)</div>
+                                    <div class="wall-calc-price" id="wall-cost-val">$795</div>
+                                </div>
+
+                                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                                    <button class="btn btn-primary" id="wall-save-design-btn" style="flex: 1;"><i class="fa-solid fa-bookmark mr-5"></i> Save Design</button>
+                                    <button class="btn btn-hero-outline" id="wall-apply-to-quote-btn" style="flex: 1;"><i class="fa-solid fa-file-invoice mr-5"></i> Add to Quote</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. SERVICES SECTION -->
+            <section id="services">
+                <p class="section-big text-dark">Comprehensive</p>
+                <p class="section-big text-primary">Services.</p>
+                <div class="pill-primary"></div>
+                <div class="p">
+                    <p>We are a full-turnkey interior design studio focused on what's best for your home and your lifestyle. From space-saving modular engineering to 3D virtual walkthroughs, here is how we bring your dream residence to reality:</p>
+                </div>
+
+                <div class="services-cards-grid">
+                    <div class="service-card">
+                        <div class="service-icon-wrap"><i class="fa-solid fa-kitchen-set"></i></div>
+                        <h3 class="service-title">Modular Kitchens</h3>
+                        <p class="service-desc">Ergonomic golden-triangle planning, anti-scratch acrylic shutters, moisture-resistant HDHMR carcasses, and pull-out organizers.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon-wrap"><i class="fa-solid fa-arrows-up-down-left-right"></i></div>
+                        <h3 class="service-title">SpaceCraft™ Furniture</h3>
+                        <p class="service-desc">Unlock 20% extra storage with hydraulic under-bed drawers, foldable Murphy wall-beds, and convertible coffee-to-study desks.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon-wrap"><i class="fa-solid fa-door-closed"></i></div>
+                        <h3 class="service-title">Custom Wardrobes</h3>
+                        <p class="service-desc">Floor-to-ceiling sliding &amp; walk-in closets with tinted fluted glass, soft-close Blum hinges, and internal sensor LED illumination.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon-wrap"><i class="fa-solid fa-couch"></i></div>
+                        <h3 class="service-title">Living &amp; Entertainment</h3>
+                        <p class="service-desc">Acoustic timber slat walls, floating marble TV units, custom shoe racks, and modern foyer storage partition designs.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon-wrap"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3 class="service-title">False Ceiling &amp; Lighting</h3>
+                        <p class="service-desc">Gypsum false ceilings with indirect warm cove lighting, magnetic track spotlights, and smart smartphone-controlled dimmers.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon-wrap"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h3 class="service-title">Complete Turnkey Civil</h3>
+                        <p class="service-desc">End-to-end hassle-free civil work: electrical upgrades, premium Asian Paints Royale coatings, plumbing, and deep post-cleanup.</p>
+                    </div>
+                </div>
+
+                <!-- 4-Step Process Timeline -->
+                <div class="pt-40">
+                    <h3 class="section-subtitle mb-20">Our 4-Step Journey to Your Dream Home</h3>
+                    <div class="process-timeline">
+                        <div class="process-step-item">
+                            <div class="process-step-badge">1</div>
+                            <h4 class="process-step-name">Free Consultation</h4>
+                            <p class="process-step-detail">Meet your dedicated design expert at our Experience Centre or virtually to discuss floorplans and lifestyle goals.</p>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="process-step-badge">2</div>
+                            <h4 class="process-step-name">3D VR Customization</h4>
+                            <p class="process-step-detail">Experience photorealistic 3D VR renders of every room and finalize materials, colors, and an itemized quotation.</p>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="process-step-badge">3</div>
+                            <h4 class="process-step-name">Automated Production</h4>
+                            <p class="process-step-detail">Your modular cabinetry is manufactured with German machinery in our factory for zero site dust and flawless precision.</p>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="process-step-badge">4</div>
+                            <h4 class="process-step-name">45-Day Installation</h4>
+                            <p class="process-step-detail">Swift on-site assembly, thorough 146-point quality audit, and handover with our 10-year comprehensive warranty.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. DESIGNCAFE STYLE INSTANT COST ESTIMATOR (1 BHK / 2 BHK / 3 BHK / 4 BHK) -->
+            <section id="cost-estimator">
+                <p class="section-big text-dark">Transparent Pricing</p>
+                <p class="section-big text-primary">Instant Cost Estimator.</p>
+                <div class="pill-primary"></div>
+                <p class="p pb-30">
+                    Get an instant, reliable price estimate tailored to your flat system. Choose your apartment configuration (1 BHK, 2 BHK, 3 BHK, 4 BHK), scope of rooms, and finish tier to calculate your investment.
+                </p>
+
+                <div class="cost-estimator-wrapper">
+                    <!-- Step 1: Flat Type -->
+                    <div class="estimator-step-block">
+                        <h3 class="estimator-step-title">
+                            <span class="estimator-step-num">1</span> Select Your Flat Configuration
+                        </h3>
+                        <div class="flat-selection-grid">
+                            <div class="flat-pill" data-flat="1bhk">
+                                <div class="flat-pill-title">1 BHK</div>
+                                <div class="flat-pill-sqft">450 – 650 sq ft</div>
+                                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 5px;">Smart Urban Compact</p>
+                            </div>
+
+                            <div class="flat-pill active" data-flat="2bhk">
+                                <span class="flat-pill-popular-badge">Most Popular</span>
+                                <div class="flat-pill-title">2 BHK</div>
+                                <div class="flat-pill-sqft">700 – 1050 sq ft</div>
+                                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 5px;">Modern Couple / Family</p>
+                            </div>
+
+                            <div class="flat-pill" data-flat="3bhk">
+                                <div class="flat-pill-title">3 BHK</div>
+                                <div class="flat-pill-sqft">1100 – 1550 sq ft</div>
+                                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 5px;">Spacious Comfort</p>
+                            </div>
+
+                            <div class="flat-pill" data-flat="4bhk">
+                                <div class="flat-pill-title">4 BHK / Villa</div>
+                                <div class="flat-pill-sqft">1800+ sq ft</div>
+                                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 5px;">Bespoke Luxury Living</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Scope of Work -->
+                    <div class="estimator-step-block">
+                        <h3 class="estimator-step-title">
+                            <span class="estimator-step-num">2</span> Select Spaces to Design
+                        </h3>
+                        <div class="room-scope-grid">
+                            <label class="room-check-card">
+                                <input type="checkbox" class="room-scope-check" value="Modular Kitchen" checked>
+                                <div>
+                                    <div class="room-check-title">Modular Kitchen</div>
+                                    <div class="room-check-sub">Carcass, shutters, accessories</div>
+                                </div>
+                            </label>
+
+                            <label class="room-check-card">
+                                <input type="checkbox" class="room-scope-check" value="Living & Dining" checked>
+                                <div>
+                                    <div class="room-check-title">Living &amp; Dining</div>
+                                    <div class="room-check-sub">TV unit, foyer, shoe cabinet</div>
+                                </div>
+                            </label>
+
+                            <label class="room-check-card">
+                                <input type="checkbox" class="room-scope-check" value="Master Bedroom" checked>
+                                <div>
+                                    <div class="room-check-title">Master Bedroom</div>
+                                    <div class="room-check-sub">Sliding wardrobe, bed, vanity</div>
+                                </div>
+                            </label>
+
+                            <label class="room-check-card">
+                                <input type="checkbox" class="room-scope-check" value="Guest / Kids Bedroom" checked>
+                                <div>
+                                    <div class="room-check-title">Guest / Kids Bedroom</div>
+                                    <div class="room-check-sub">Hinged wardrobe, study unit</div>
+                                </div>
+                            </label>
+
+                            <label class="room-check-card">
+                                <input type="checkbox" class="room-scope-check" value="False Ceiling & Painting">
+                                <div>
+                                    <div class="room-check-title">False Ceiling &amp; Painting</div>
+                                    <div class="room-check-sub">Cove lights, Asian Paints Royale</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Finish & Material Tier -->
+                    <div class="estimator-step-block">
+                        <h3 class="estimator-step-title">
+                            <span class="estimator-step-num">3</span> Choose Material &amp; Hardware Tier
+                        </h3>
+                        <div class="tiers-grid">
+                            <div class="tier-card" data-tier="essential">
+                                <div class="tier-name">Essential</div>
+                                <div style="font-size: 0.85rem; color: var(--text-muted);">Standard Quality &amp; Durability</div>
+                                <ul class="tier-features-list">
+                                    <li><i class="fa-solid fa-check"></i> High-grade matte laminates</li>
+                                    <li><i class="fa-solid fa-check"></i> Standard soft-close hardware</li>
+                                    <li><i class="fa-solid fa-check"></i> 5-Year Material Warranty</li>
+                                    <li><i class="fa-solid fa-check"></i> Standard storage modules</li>
+                                </ul>
+                            </div>
+
+                            <div class="tier-card active" data-tier="premium">
+                                <span class="flat-pill-popular-badge">DesignCafe Specialty</span>
+                                <div class="tier-name">Premium SpaceCraft™</div>
+                                <div style="font-size: 0.85rem; color: var(--text-muted);">20% Extra Storage &amp; Luxury</div>
+                                <ul class="tier-features-list">
+                                    <li><i class="fa-solid fa-check"></i> Anti-scratch acrylics &amp; veneers</li>
+                                    <li><i class="fa-solid fa-check"></i> German Blum / Hettich fittings</li>
+                                    <li><i class="fa-solid fa-check"></i> 10-Year Comprehensive Warranty</li>
+                                    <li><i class="fa-solid fa-check"></i> SpaceCraft™ foldaway solutions</li>
+                                </ul>
+                            </div>
+
+                            <div class="tier-card" data-tier="luxe">
+                                <div class="tier-name">Luxe Bespoke</div>
+                                <div style="font-size: 0.85rem; color: var(--text-muted);">High-End Architectural Finishes</div>
+                                <ul class="tier-features-list">
+                                    <li><i class="fa-solid fa-check"></i> Italian PU lacquer &amp; sintered stone</li>
+                                    <li><i class="fa-solid fa-check"></i> Tinted fluted glass wardrobe doors</li>
+                                    <li><i class="fa-solid fa-check"></i> Voice &amp; app smart lighting systems</li>
+                                    <li><i class="fa-solid fa-check"></i> Lifetime hardware warranty</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Calculation Preview -->
+                    <div id="estimator-live-preview"></div>
+
+                    <!-- Step 4: Customer Details Intake Form -->
+                    <div class="estimator-form-container">
+                        <h3 class="estimator-step-title mb-20">
+                            <span class="estimator-step-num">4</span> Enter Your Details for Full Itemized Quotation
+                        </h3>
+                        <form id="estimator-customer-form">
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label for="est-name"><i class="fa-solid fa-user mr-5"></i> Full Name *</label>
+                                    <input type="text" id="est-name" class="form-control-custom" placeholder="e.g. Sahil Sharma" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="est-phone"><i class="fa-solid fa-phone mr-5"></i> Phone Number *</label>
+                                    <input type="tel" id="est-phone" class="form-control-custom" placeholder="e.g. +91 98765 43210" required>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label for="est-email"><i class="fa-solid fa-envelope mr-5"></i> Email Address</label>
+                                    <input type="email" id="est-email" class="form-control-custom" placeholder="e.g. sahil@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="est-city"><i class="fa-solid fa-city mr-5"></i> Property City</label>
+                                    <select id="est-city" class="form-control-custom">
+                                        <option value="Mumbai">Mumbai</option>
+                                        <option value="Bengaluru">Bengaluru</option>
+                                        <option value="Delhi NCR">Delhi NCR</option>
+                                        <option value="Pune">Pune</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Kolkata">Kolkata</option>
+                                        <option value="Other">Other City</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-20">
+                                <label for="est-possession"><i class="fa-solid fa-key mr-5"></i> Flat Possession Status</label>
+                                <select id="est-possession" class="form-control-custom">
+                                    <option value="Ready to Move In">Ready to Move In (Immediate)</option>
+                                    <option value="Within 1 to 3 Months">Within 1 to 3 Months</option>
+                                    <option value="Within 3 to 6 Months">Within 3 to 6 Months</option>
+                                    <option value="6+ Months / Planning Phase">6+ Months / Planning Phase</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="sendbtn" id="calculate-cost-btn">
+                                <i class="fa-solid fa-file-invoice-dollar"></i> Generate Detailed Quotation &amp; Book Free 3D Consultation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. DESIGNERS SECTION -->
+            <section id="designers">
+                <p class="section-big text-dark">Meet Our</p>
+                <p class="section-big text-primary">Designers.</p>
+                <div class="pill-primary"></div>
+                <div class="p">
+                    <p>The best team in the world! Our senior interior architects and space planners are thoughtfully chosen for their aesthetic vision, technical mastery, and commitment to your delight:</p>
+                </div>
+
+                <div class="designers-grid">
+                    <div class="designer-card">
+                        <div class="designer-img-box">
+                            <img src="./images/ceo.jpg" alt="John Doe - CEO & Principal Architect">
+                            <span class="designer-exp-tag">14+ Years Exp • 420+ Homes</span>
+                        </div>
+                        <div class="designer-info-wrap">
+                            <h4 class="designer-name">John Doe</h4>
+                            <p class="designer-role">CEO &amp; Principal Architect</p>
+                            <p class="designer-bio">Graduate of Architectural Association. Specializes in luxury villas, open-concept duplexes, and sustainable biophilic interior environments.</p>
+                            <button class="btn-book-consult book-designer-btn" data-designer="John Doe">
+                                <i class="fa-solid fa-calendar-check mr-5"></i> Book 1-on-1 Consultation
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="designer-card">
+                        <div class="designer-img-box">
+                            <img src="./images/designer.jpg" alt="Jane Doe - Lead Interior Designer">
+                            <span class="designer-exp-tag">9+ Years Exp • 280+ Homes</span>
+                        </div>
+                        <div class="designer-info-wrap">
+                            <h4 class="designer-name">Jane Doe</h4>
+                            <p class="designer-role">Lead Interior Stylist</p>
+                            <p class="designer-bio">Master of Scandinavian minimalism and modular kitchen space-optimization. Passionate about tactile textures and calming lighting palettes.</p>
+                            <button class="btn-book-consult book-designer-btn" data-designer="Jane Doe">
+                                <i class="fa-solid fa-calendar-check mr-5"></i> Book 1-on-1 Consultation
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="designer-card">
+                        <div class="designer-img-box">
+                            <img src="./images/architect.jpg" alt="Mike Ross - 3D Visualizer & Technical Architect">
+                            <span class="designer-exp-tag">8+ Years Exp • 350+ 3D Projects</span>
+                        </div>
+                        <div class="designer-info-wrap">
+                            <h4 class="designer-name">Mike Ross</h4>
+                            <p class="designer-role">3D Visualizer &amp; Architect</p>
+                            <p class="designer-bio">Specialist in real-time VR architectural walkthroughs, bespoke parametric wall systems, and factory manufacturing tolerances.</p>
+                            <button class="btn-book-consult book-designer-btn" data-designer="Mike Ross">
+                                <i class="fa-solid fa-calendar-check mr-5"></i> Book 1-on-1 Consultation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. PACKAGES SECTION -->
+            <section id="packages">
+                <p class="section-big text-dark">Transparent</p>
+                <p class="section-big text-primary">Packages.</p>
+                <div class="pill-primary"></div>
+                <div class="p">
+                    <p>Transparent pricing crafted for every stage of home ownership. From starter urban apartments to bespoke luxury residences, enjoy zero hidden charges and flexible monthly EMI support.</p>
+                </div>
+
+                <div class="packages-grid">
+                    <!-- Basic / Essential Package -->
+                    <div class="package-card">
+                        <div class="package-header">
+                            <span class="package-badge" style="background: #e0e0e0; color: #333;">Starter</span>
+                            <h3 class="package-title">Basic</h3>
+                            <div class="package-price">$2,499</div>
+                            <div class="package-sub">or $185 / month (0% EMI)</div>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fa-solid fa-check"></i> 2D &amp; 3D Floorplanning</li>
+                            <li><i class="fa-solid fa-check"></i> High-Durability Matte Laminates</li>
+                            <li><i class="fa-solid fa-check"></i> Standard Soft-Close Hinges</li>
+                            <li><i class="fa-solid fa-check"></i> 10 Hours Dedicated Support</li>
+                            <li><i class="fa-solid fa-check"></i> Professional Photography</li>
+                            <li><i class="fa-solid fa-check"></i> 5-Year Warranty Protection</li>
+                        </ul>
+                        <div class="package-footer">
+                            <a href="#contact" class="btn btn-outline-dark w-100 text-center" style="display: block; padding: 12px; border-radius: 6px;">Choose Basic</a>
+                        </div>
+                    </div>
+
+                    <!-- Pro / Signature Package (Highlighted) -->
+                    <div class="package-card highlighted">
+                        <div class="package-header">
+                            <span class="package-badge" style="background: var(--primary-color); color: white;">DesignCafe Most Popular</span>
+                            <h3 class="package-title">Signature Pro</h3>
+                            <div class="package-price">$4,899</div>
+                            <div class="package-sub">or $325 / month (0% EMI)</div>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fa-solid fa-check"></i> Full 3D VR Walkthrough</li>
+                            <li><i class="fa-solid fa-check"></i> SpaceCraft™ 20% Extra Storage</li>
+                            <li><i class="fa-solid fa-check"></i> Anti-Scratch Acrylics &amp; Veneers</li>
+                            <li><i class="fa-solid fa-check"></i> German Blum / Hettich Soft-Close</li>
+                            <li><i class="fa-solid fa-check"></i> 45-Day Move-In Delivery Guarantee</li>
+                            <li><i class="fa-solid fa-check"></i> 10-Year Comprehensive Warranty</li>
+                            <li><i class="fa-solid fa-check"></i> False Ceiling with Warm Cove Lights</li>
+                        </ul>
+                        <div class="package-footer">
+                            <a href="#contact" class="btn btn-primary w-100 text-center" style="display: block; padding: 12px; border-radius: 6px;">Choose Signature Pro</a>
+                        </div>
+                    </div>
+
+                    <!-- Luxury Bespoke Package -->
+                    <div class="package-card">
+                        <div class="package-header">
+                            <span class="package-badge" style="background: #212121; color: white;">Luxury Bespoke</span>
+                            <h3 class="package-title">Luxe Elite</h3>
+                            <div class="package-price">$8,499</div>
+                            <div class="package-sub">or $540 / month (0% EMI)</div>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fa-solid fa-check"></i> High-Gloss Italian PU &amp; Sintered Stone</li>
+                            <li><i class="fa-solid fa-check"></i> Tinted Fluted Glass Wardrobe Facades</li>
+                            <li><i class="fa-solid fa-check"></i> Automated Smart Lighting &amp; Dimmers</li>
+                            <li><i class="fa-solid fa-check"></i> 3D Parametric Feature Wall Included</li>
+                            <li><i class="fa-solid fa-check"></i> Dedicated Senior Project Architect</li>
+                            <li><i class="fa-solid fa-check"></i> Lifetime Hardware Warranty</li>
+                            <li><i class="fa-solid fa-check"></i> Deep Clean &amp; White-Glove Handover</li>
+                        </ul>
+                        <div class="package-footer">
+                            <a href="#contact" class="btn btn-outline-dark w-100 text-center" style="display: block; padding: 12px; border-radius: 6px;">Choose Luxe Elite</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. CUSTOMER REVIEWS & TESTIMONIALS -->
+            <section id="reviews">
+                <p class="section-big text-dark">Client Stories</p>
+                <p class="section-big text-primary">Testimonials.</p>
+                <div class="pill-primary"></div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-quote">"The 3D Wall Studio and space-saving foldaway dining table completely transformed our 2 BHK apartment. Their 45-day move-in promise was kept right on schedule without a single day delay!"</p>
+                        <div class="reviewer-meta">
+                            <img src="./images/avatar.jpg" alt="Pooja &amp; Rohit" class="reviewer-avatar">
+                            <div>
+                                <h4 class="reviewer-name">Pooja &amp; Rohit Sen</h4>
+                                <p class="reviewer-flat">2 BHK Homeowners • Bengaluru</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-quote">"We were amazed by the render.ai style visualizer where we could test out B&amp;W and colored limestone finishes on our own kitchen island. Transparent itemized quotation and zero surprise expenses."</p>
+                        <div class="reviewer-meta">
+                            <img src="./images/girl.jpg" alt="Ananya Deshmukh" class="reviewer-avatar">
+                            <div>
+                                <h4 class="reviewer-name">Ananya Deshmukh</h4>
+                                <p class="reviewer-flat">3 BHK Penthouse • Mumbai</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-quote">"As an architect myself, I was impressed by the German factory edge-banding quality and Blum hardware integration. UrbanNest delivers real luxury at sensible pricing."</p>
+                        <div class="reviewer-meta">
+                            <img src="./images/bandmem.jpg" alt="Vikram Malhotra" class="reviewer-avatar">
+                            <div>
+                                <h4 class="reviewer-name">Vikram Malhotra</h4>
+                                <p class="reviewer-flat">4 BHK Duplex • Pune</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Accordion -->
+                <div class="faq-container">
+                    <h3 class="section-subtitle mb-20">Frequently Asked Questions</h3>
+                    <div class="faq-item open">
+                        <div class="faq-question">
+                            <span>How does the 45-day move-in guarantee work?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Once 3D designs are finalized and production commences at our automated plant, we commit to handover within 45 days. If we fail to hand over on time, we pay your apartment rent for every delayed day!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What does DesignCafe's SpaceCraft™ technology include?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>SpaceCraft™ is our proprietary space-saving engineering suite: hydraulic underbed storage, concealed foldaway Murphy beds, 2-in-1 coffee-cum-workstations, and corner pullout pantries that unlock up to 20% extra cubic storage.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I customize individual feature walls with the 3D Wall Studio?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Our 3D Wall Studio allows you to mix and match paints, fluted timber acoustic slats, exposed bricks, and Carrara marble cladding. You can also calculate the exact square-footage material cost and add it to your quotation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are there flexible payment and 0% EMI options available?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We partner with major leading financial institutions to provide 0% interest monthly installment plans spanning 12 to 36 months, with clear milestone-based payment disbursements.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. CONTACT SECTION -->
+            <section id="contact">
+                <p class="section-big text-dark">Get in Touch</p>
+                <p class="section-big text-primary">Contact.</p>
+                <div class="pill-primary"></div>
+                <div class="p pb-20">
+                    <p>Do you want us to style your home? Fill out the details below and book a complimentary 3D VR design consultation at your nearest Experience Centre:</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-layout">
+                        <!-- Left Details & Visiting info -->
+                        <div class="contact-info-panel">
+                            <h3>Visit Our Experience Centre</h3>
+                            <p class="p">Experience our life-sized modular kitchens, space-saving smart bedrooms, and material library in person.</p>
+                            
+                            <ul class="contact-info-list">
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <strong>UrbanNest Design Flagship Centre</strong>
+                                        <p style="color: var(--text-muted); font-size: 0.85rem;">42 Skyline Boulevard, Indiranagar, Bengaluru - 560038</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div>
+                                        <strong>Direct Helpline</strong>
+                                        <p style="color: var(--text-muted); font-size: 0.85rem;">+91 (080) 4122-8900 / +1 (800) 555-NEST</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <div>
+                                        <strong>Design Inquiries</strong>
+                                        <p style="color: var(--text-muted); font-size: 0.85rem;">hello@urbannest-interiors.com</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div>
+                                        <strong>Studio Hours</strong>
+                                        <p style="color: var(--text-muted); font-size: 0.85rem;">Monday – Sunday: 10:00 AM – 8:00 PM</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Right Contact Form -->
+                        <div class="contact-form-panel">
+                            <form id="contact-form">
+                                <div class="form-group mb-15">
+                                    <label for="contact-name">Your Full Name *</label>
+                                    <input type="text" id="contact-name" placeholder="John Doe" class="form-control-custom" required>
+                                </div>
+
+                                <div class="form-grid-2 mb-15">
+                                    <div class="form-group">
+                                        <label for="contact-email">Email Address *</label>
+                                        <input type="email" id="contact-email" placeholder="john@example.com" class="form-control-custom" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-phone">Phone Number *</label>
+                                        <input type="tel" id="contact-phone" placeholder="+91 98765 43210" class="form-control-custom" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid-2 mb-15">
+                                    <div class="form-group">
+                                        <label for="contact-flat-type">Flat System</label>
+                                        <select id="contact-flat-type" class="form-control-custom">
+                                            <option value="1 BHK">1 BHK Apartment</option>
+                                            <option value="2 BHK" selected>2 BHK Apartment</option>
+                                            <option value="3 BHK">3 BHK Apartment</option>
+                                            <option value="4+ BHK / Villa">4+ BHK / Villa</option>
+                                            <option value="Commercial / Office">Commercial / Studio</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-budget">Estimated Budget</label>
+                                        <select id="contact-budget" class="form-control-custom">
+                                            <option value="$2,000 - $4,000">Essential ($2,000 – $4,000)</option>
+                                            <option value="$4,000 - $7,000" selected>Premium ($4,000 – $7,000)</option>
+                                            <option value="$7,000 - $12,000">Luxury ($7,000 – $12,000)</option>
+                                            <option value="$12,000+">Ultra Luxury ($12,000+)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-20">
+                                    <label for="contact-message">Design Requirements / Message</label>
+                                    <textarea id="contact-message" rows="4" placeholder="Tell us about your floorplan, preferred colors, or specific modular requirements..." class="form-control-custom"></textarea>
+                                </div>
+
+                                <button type="submit" class="sendbtn">
+                                    <i class="fa-solid fa-paper-plane mr-5"></i> Send Message &amp; Book Visit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="footer-custom">
+                    <div>
+                        <p>&copy; 2026 <strong>UrbanNest Interiors</strong>. All rights reserved.</p>
+                        <p style="font-size: 0.8rem; margin-top: 4px;">Powered by UrbanNest Design Systems • Inspired by DesignCafe &amp; Render.ai</p>
+                    </div>
+                    <div style="display: flex; gap: 15px; font-size: 1.2rem;">
+                        <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-houzz"></i></a>
+                        <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         MODALS (Instant Quotation & Showcase Lightbox)
+         ========================================================================== -->
+
+    <!-- Quotation Modal -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-content-card">
+            <button class="modal-close-btn" id="close-quote-modal-btn" aria-label="Close modal">&times;</button>
+            <div id="quote-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Showcase Lightbox Modal -->
+    <div class="lightbox-modal" id="gallery-lightbox-modal">
+        <button class="modal-close-btn" id="lightbox-close-btn" style="color: white; top: 30px; right: 40px; font-size: 2rem;">&times;</button>
+        <div class="lightbox-img-box">
+            <img src="" alt="Enlarged Project Showcase" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Interactive Script -->
+    <script src="./js/interior.js"></script>
+</body>
+</html>
